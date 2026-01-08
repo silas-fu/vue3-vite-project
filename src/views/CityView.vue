@@ -42,6 +42,10 @@ const cityData = computed(() => {
   </div>
 </template>
 <style scoped>
+.test-css {
+  display: flex;
+}
+
 .back-btn {
   padding: 8px 16px;
   margin-bottom: 16px;
