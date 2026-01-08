@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import index from '@/views/index.vue'
+import CityView from '@/views/cityView.vue'
+import CityHome from '@/views/CityHome.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,6 +11,16 @@ const router = createRouter({
       name: 'index',
       component: index,
     },
+    {
+      path: '/city-aqi',
+      name: 'CityHome',
+      component: CityHome,
+    },
+    {
+      path: '/city/:cityName',  // 獨立的路由
+      name: 'CityView',
+      component: CityView
+    }
     // {
     //   path: '/about',
     //   name: 'about',

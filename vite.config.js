@@ -15,4 +15,11 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  proxy: {
+    '/api': {
+        target: 'https://data.moenv.gov.tw',
+        changeOrigin: true,
+        secure: false,
+      }
+  }
 })
